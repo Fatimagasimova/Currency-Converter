@@ -107,7 +107,7 @@ function fetchAndConvert() {
       })
       .catch(error => {
         console.error("Error fetching currency rates:", error);
-        internetStatus.textContent = "İnternet bağlantısını yoxlayın.";
+        internetStatus.textContent = "Check your internet connection.";
       });
   } else {
     fetch(`https://v6.exchangerate-api.com/v6/f8b9170359669b98025f951c/latest/${toCurrency}`)
@@ -123,7 +123,7 @@ function fetchAndConvert() {
       })
       .catch(error => {
         console.error("Error fetching currency rates:", error);
-        internetStatus.textContent = "İnternet bağlantısını yoxlayın.";
+        internetStatus.textContent = "Check your internet connection.";
       });
   }
 }
@@ -145,7 +145,7 @@ burger.addEventListener('click', () => {
 });
 
 window.addEventListener('online', () => {
-  internetStatus.textContent = "İnternet yenidən qoşuldu";
+  internetStatus.textContent = "Internet reconnected.";
   internetStatus.classList.add("show", "online");
   internetStatus.classList.remove("offline", "hide");
   setTimeout(() => {
@@ -157,14 +157,14 @@ window.addEventListener('online', () => {
 });
 
 window.addEventListener('offline', () => {
-  internetStatus.textContent = "İnternet bağlantısı kəsildi";
+  internetStatus.textContent = "Internet connection lost.";
   internetStatus.classList.add("show", "offline");
   internetStatus.classList.remove("online", "hide");
 });
 
 
 window.addEventListener('online', () => {
-  internetStatus.textContent = "İnternet yenidən qoşuldu";
+  internetStatus.textContent = "Internet reconnected.";
   internetStatus.classList.add("show", "online");
   internetStatus.classList.remove("offline", "hide");
 
@@ -182,7 +182,7 @@ window.addEventListener('online', () => {
 });
 
 window.addEventListener('offline', () => {
-  internetStatus.textContent = "İnternet bağlantısı kəsildi";
+  internetStatus.textContent = "Internet connection lost.";
   internetStatus.classList.add("show", "offline");
   internetStatus.classList.remove("online", "hide");
 
