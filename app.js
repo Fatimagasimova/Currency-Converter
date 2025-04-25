@@ -80,6 +80,7 @@ function sanitizeInput(value) {
   return decimal !== undefined ? `${main}.${decimal}` : main;
 }
 
+
 function fetchAndConvert() {
   if (fromCurrency === toCurrency) {
     rate1.textContent = `1 ${fromCurrency} = 1 ${toCurrency}`;
@@ -179,7 +180,6 @@ window.addEventListener('online', () => {
     fetchAndConvert();
   }
 });
-
 
 window.addEventListener('offline', () => {
   internetStatus.textContent = "İnternet bağlantısı kəsildi";
