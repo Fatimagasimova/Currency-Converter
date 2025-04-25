@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #F5F5F6;
+  padding: 5px 0;
+}
+
+.background {
+  margin: 0 auto;
+}
+
+#second {
+  display: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 11px;
+  height: 50px;
+  align-items: center;
+  font-weight: 500;
+  padding: 0 10px;
+}
+
+.logo {
+  width: 89px;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+ul {
+  width: 565px !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  gap: 23px;
+  color: #959BA4;
+  margin: 20px;
+}
+
+ul a {
+  color: #959BA4;
+  text-decoration: none;
+}
+
+.first {
+  color: #000;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #7a7f86;
+}
+
+
+li:first-child {
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+}
+
+.login {
+  width: 70px;
+  height: 33px;
+  background-color: white;
+  border: none;
+  font-weight: 600;
+  font-size: 11px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.login:hover {
+  cursor: pointer;
+  background-color: rgb(205, 202, 202);
+}
+
+.main {
+  margin: 60px auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding-left: 90px;
+}
+
+.boxes {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+
+.left-boxes {
+  margin-right: 100px;
+}
+
+.left-boxes p,
+.right-boxes p {
+  color: #959BA4;
+  font-size: 12px;
+  margin: 5px;
+}
+
+.buttons {
+  width: 260px;
+  display: flex;
+  flex-direction: row;
+}
+
+.buttons div {
+  box-sizing: border-box;
+  width: 65px;
+  height: 30px;
+  margin: 0;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid #E5E5E5;
+  border-right: none;
+  color: #C6C6C6;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons div:last-child {
+  border-right: 1px solid #E5E5E5;
+}
+
+input {
+  margin-top: 10px;
+  width: 260px;
+  height: 100px;
+  border: 1px solid #E5E5E5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 45px;
+  border-bottom: none;
+  outline: none;
+}
+
+.burger {
+  display: none;
+  width: 30px;
+  cursor: pointer;
+}
+
+p.rate1,
+p.rate2 {
+  border: 1px solid #E5E5E5;
+  border-top: none;
+  width: 260px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px;
+}
+
+
+.buttons div.active {
+  background-color: #8852f4;
+  color: white;
+}
+
+div.internet-status {
+  display: none;
+  position: fixed;
+  left: 54%;
+  text-align: center;
+  top: 70px;
+  font-size: 10px;
+  width: 20rem;
+  background-color: #dbddd7;
+  font-weight: bold;
+  margin: 0 auto;
+  transform: translateX(-50%);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  z-index: 1000;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.internet-status.show {
+  display: block;
+  opacity: 1;
+}
+
+.internet-status.hide {
+  opacity: 0;
+}
+
+.internet-status.online {
+  color: rgb(22, 158, 22);
+}
+
+.internet-status.offline {
+  color: red;
+}
+
+
+@media (max-width: 775px) {
+
+  ul.menu {
+    display: none;
+    position: fixed;
+    top: 85px;
+    right: -5px;
+    width: 150px !important;
+    height: 250px;
+    margin: 10px auto;
+    background-color: #bca0f6;
+    border-radius: 10px;
+    padding: 60px 20px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu a {
+    display: flex;
+    row-gap: 10%;
+    padding-right: 90px;
+    padding-left: 10px;
+    padding-bottom: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000 !important;
+    cursor: pointer;
+  }
+
+  .menu.active {
+    display: block;
+  }
+
+  .burger {
+    display: block;
+    right: 30px;
+    top: 15px;
+  }
+
+  nav {
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+  }
+
+  .main {
+    padding: 0 40px;
+    margin: 60px auto;
+  }
+
+  ul.menu li {
+    color: #000;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+
+  .boxes {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 40px;
+    gap: 35px;
+  }
+
+  .login {
+    position: absolute;
+    right: 70px;
+  }
+
+  .left-boxes,
+  .right-boxes {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+
+  .buttons {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  div.internet-status {
+    width: 15rem;
+    font-size: 20px;
+  }
+}

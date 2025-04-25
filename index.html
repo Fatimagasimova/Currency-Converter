@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/x-icon" href="./Images/exchange.jpg">
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div class="background">
+        <nav>
+          <img class="logo" src="./Images/logo.svg" alt="logo">
+          <ul class="menu">
+            <li><a href="#" class="first">БАНК</a></li>
+            <li><a href="#">БИЗНЕС</a></li>
+            <li><a href="#">ИНВЕСТИЦИИ</a></li>
+            <li><a href="#">СТРАХОВАНИЕ</a></li>
+            <li><a href="#">МОБАЙЛ</a></li>
+            <li><a href="#">ПУТЕШЕСТВИЯ</a></li>
+            <li><a href="#">РАЗВЛЕЧЕНИЯ</a></li>
+          </ul>
+          <button class="login">ВОЙТИ</button>
+
+          <img src="./Images/burger-bar.png" class="burger" alt="logo">
+      </div>
+    </div>
+    </nav>
+    <div class="main">
+      <h1 id="first">Конвертер валют онлайн</h1>
+      <div class="boxes">
+        <div class="left-boxes">
+          <p>У меня есть</p>
+          <div class="buttons">
+            <div class="left-btn rub1">RUB</div>
+            <div class="left-btn usd1">USD</div>
+            <div class="left-btn eur1">EUR</div>
+            <div class="left-btn gbp1">GBP</div>
+          </div>
+          <input type="text" name="left-side" class="left-side">
+          <p class="rate1">1 RUB = 0.0135 USD</p>
+
+        </div>
+
+        <div class="right-boxes">
+          <p>Хочу приобрести</p>
+          <div class="buttons">
+            <div class="right-btn rub2">RUB</div>
+            <div class="right-btn usd2">USD</div>
+            <div class="right-btn eur2">EUR</div>
+            <div class="right-btn gbp2">GBP</div>
+          </div>
+          <input type="text" name="right-side" class="right-side">
+          <p class="rate2">1 USD = 73.8896 RUB</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="internet-status"></div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
